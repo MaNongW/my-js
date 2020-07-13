@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var todolist = [
+            {title: '我今天吃八个馒头',
+            done: false
+        }, {title: '我今天学习jquery',
+            done: false
+        },];
+        localStorage.setItem("todo",JSON.stringify(todolist));
+        var data = localStorage.getItem("todo");
+        // console.log(typeof data);
+        // console.log(data[0].title);
+        data = JSON.parse(data);
+        console.log(data);
+    </script>
+</body>
+
+</html>
